@@ -9,7 +9,7 @@ const UrlShort = () => {
     console.log("Hellos");
 
     try {
-        const res = await axios.post("http://localhost:3111/api/url",{
+        const res = await axios.post("https://backend-nmd-final.vercel.app/api/url",{
             "originalUrl": url
         })
         console.log(res.data);
@@ -54,9 +54,9 @@ const UrlShort = () => {
       </button>
 
         {shortUrl && <a 
-        href={`http://localhost:3111/myshorturl/${shortUrl}`}>
+        href={`https://backend-nmd-final.vercel.app/myshorturl/${shortUrl}`}>
             
-            http://localhost:3111/myshorturl/{shortUrl}</a>}
+            https://backend-nmd-final.vercel.app/myshorturl/{shortUrl}</a>}
     </div>
   )
 }

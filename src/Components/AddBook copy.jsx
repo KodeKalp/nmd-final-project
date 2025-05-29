@@ -17,7 +17,7 @@ const AddBook = () => {
             e.preventDefault();
 
             try{
-                const responce = await axios.post('http://localhost:3111/api/books',
+                const responce = await axios.post('https://backend-nmd-final.vercel.app/api/books',
                     {title, author, year}
                 )
                 console.log(responce)
