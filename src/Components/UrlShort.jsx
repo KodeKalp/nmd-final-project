@@ -9,7 +9,7 @@ const UrlShort = () => {
     console.log("Hellos");
 
     try {
-        const res = await axios.post(`${process.env.REACT_API}/api/url`,{
+        const res = await axios.post(`${process.env.REACT_APP_API}/api/url`,{
             "originalUrl": url
         })
         console.log(res.data);
@@ -54,9 +54,9 @@ const UrlShort = () => {
       </button>
 
         {shortUrl && <a 
-        href={`${process.env.REACT_API}/myshorturl/${shortUrl}`}>
+        href={`${process.env.REACT_APP_API}/myshorturl/${shortUrl}`}>
             
-            {process.env.REACT_API}/myshorturl/{shortUrl}</a>}
+            {process.env.REACT_APP_API}/myshorturl/{shortUrl}</a>}
     </div>
   )
 }

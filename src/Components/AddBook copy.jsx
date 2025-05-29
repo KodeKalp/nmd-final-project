@@ -17,7 +17,7 @@ const AddBook = () => {
             e.preventDefault();
 
             try{
-                const responce = await axios.post(`${REACT_API}/api/books`,
+                const responce = await axios.post(`${REACT_APP_API}/api/books`,
                     {title, author, year}
                 )
                 console.log(responce)
