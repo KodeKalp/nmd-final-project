@@ -10,7 +10,7 @@ const AddBook = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://backend-nmd-final.vercel.app/api/books', {
+      const response = await axios.post(`${process.env.REACT_API}/api/books`, {
         title,
         author,
         year,

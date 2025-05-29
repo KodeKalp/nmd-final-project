@@ -12,7 +12,7 @@ const AllBooks = () => {
 
     const fetchBooks = async () => {
 
-        const res = await axios.get('https://backend-nmd-final.vercel.app/api/books')
+        const res = await axios.get(`${process.env.REACT_API}/api/books`)
         console.log(res.data)
         setBooks(res.data)
         setLoading(false)
@@ -20,7 +20,7 @@ const AllBooks = () => {
 
     const handleDelete = async (id) => {
         console.log("deleting");
-        const res = await axios.delete(`https://backend-nmd-final.vercel.app/api/books/${id}`)
+        const res = await axios.delete(`${process.env.REACT_API}/api/books/${id}`)
         console.log(res)
         fetchBooks();
     }

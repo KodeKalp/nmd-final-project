@@ -9,7 +9,7 @@ const UrlShort = () => {
     console.log("Hellos");
 
     try {
-        const res = await axios.post("https://backend-nmd-final.vercel.app/api/url",{
+        const res = await axios.post(`${process.env.REACT_API}/api/url`,{
             "originalUrl": url
         })
         console.log(res.data);
@@ -54,9 +54,9 @@ const UrlShort = () => {
       </button>
 
         {shortUrl && <a 
-        href={`https://backend-nmd-final.vercel.app/myshorturl/${shortUrl}`}>
+        href={`${process.env.REACT_API}/myshorturl/${shortUrl}`}>
             
-            https://backend-nmd-final.vercel.app/myshorturl/{shortUrl}</a>}
+            {process.env.REACT_API}/myshorturl/{shortUrl}</a>}
     </div>
   )
 }
